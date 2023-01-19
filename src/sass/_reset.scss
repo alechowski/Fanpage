@@ -1,0 +1,50 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+  }
+
+body {
+	min-height: 100vh;
+	line-height: 1.5;
+}
+
+a {
+	color: black;
+	text-decoration: none;
+}
+
+button {
+	display: inline-block;
+	border: none;
+	background: none;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
