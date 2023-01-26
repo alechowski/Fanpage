@@ -2,43 +2,97 @@
 @import './colors';
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: $background-color;
-    color: $text-color;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: $background-color;
+	color: $text-color;
 }
 
 .navbar {
-    position: absolute;
-    top: 0;
-    right: 0;
-    
-        &__list {
-            display: none;
-        }
-    
-        &__item {
-            padding: 0.5em;
-        }
+	position: absolute;
+	top: 0;
+	right: 0;
+
+	&__list {
+		display: none;
+	}
+
+	&__item {
+		padding: 0.5em;
+	}
+
+	&__burger {
+		padding: 2em;
+		cursor: pointer;
+		.burger-box {
+			position: relative;
+			display: inline-block;
+			top: 5px;
+			width: 30px;
+			height: 24px;
+			.burger-bar,
+            .burger-bar:after,
+			.burger-bar:before {
+				position: absolute;
+				display: block;
+				right: 0;
+				top: 0;
+				height: 3px;
+				width: 30px;
+				background-color: $text-color;
+                border-radius: 3px;
+			}
+            .burger-bar:after,
+			.burger-bar:before {
+				content: '';
+			}
+
+            .burger-bar:after {
+                top: 20px;
+                width: 60%;
+            }
+
+            .burger-bar:before{
+                top: 10px;
+                width: 80%;
+            }
+		}
+	}
 }
-    
 
 .header {
+	&__background-block {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100vh;
+		width: 50vw;
+		background-color: $highlight-color;
+		z-index: -1;
+	}
 
-    &__background-block {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100vh;
-        width: 50vw;
-        background-color: $highlight-color;
-        z-index: -1;
-    }
+	&__logo {
+		box-shadow: 0 0 20px $background-color;
+	}
 
-    &__logo {
-        box-shadow: 0 0 20px $background-color;
-    }
+	&__arrows-box {
+		position: absolute;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		cursor: pointer;
+	}
+
+	&__arrow {
+		&--bigger {
+            margin-bottom: -4.5em;
+		}
+
+	}
 }
-
