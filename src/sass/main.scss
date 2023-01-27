@@ -1,5 +1,4 @@
-@import './reset';
-@import './colors';
+@use './utilities/' as *;
 
 body {
 	display: flex;
@@ -29,7 +28,7 @@ body {
 		.burger-box {
 			position: relative;
 			display: inline-block;
-			top: 5px;
+			top: 1em;
 			width: 40px;
 			height: 24px;
 			.burger-bar,
