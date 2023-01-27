@@ -30,7 +30,7 @@ body {
 			position: relative;
 			display: inline-block;
 			top: 5px;
-			width: 30px;
+			width: 40px;
 			height: 24px;
 			.burger-bar,
             .burger-bar:after,
@@ -40,7 +40,7 @@ body {
 				right: 0;
 				top: 0;
 				height: 3px;
-				width: 30px;
+				width: 40px;
 				background-color: $text-color;
                 border-radius: 3px;
 			}
@@ -73,9 +73,20 @@ body {
 		z-index: -1;
 	}
 
-	&__logo {
-		box-shadow: 0 0 20px $background-color;
-	}
+    &__box {
+        &--large {
+            display: none;
+        }
+
+        &--small {
+            display: block;
+        }
+
+        &-logo {
+            box-shadow: 0 0 20px $background-color;
+        }
+    }
+
 
 	&__arrows-box {
 		position: absolute;
@@ -91,8 +102,11 @@ body {
 
 	&__arrow {
 		&--bigger {
-            margin-bottom: -4.5em;
+            margin-bottom: -5em;
 		}
 
 	}
 }
+
+
+@import './large';
