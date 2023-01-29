@@ -5,22 +5,16 @@ body {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	font-size: 1.6rem;
 	background-color: $background-color;
 	color: $text-color;
+	overflow: hidden;
 }
 
 .navbar {
 	position: absolute;
 	top: 0;
 	right: 0;
-
-	&__list {
-		display: none;
-	}
-
-	&__item {
-		padding: 0.5em;
-	}
 
 	&__burger {
 		padding: 2em;
@@ -59,6 +53,25 @@ body {
             }
 		}
 	}
+
+	&__list {
+		position: absolute;
+		top: 0;
+		left: 150%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		height: 100vh;
+		width: 100vw;
+		background-color: $background-color;
+		font-size: 2.5rem;
+	}
+
+	&__item {
+		padding: 2em;
+	}
+
 }
 
 .header {
@@ -101,7 +114,7 @@ body {
 
 	&__arrow {
 		&--bigger {
-            margin-bottom: -5em;
+            margin-bottom: -3.5em;
 		}
 
 	}
