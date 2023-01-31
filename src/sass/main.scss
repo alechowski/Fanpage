@@ -19,6 +19,7 @@ body {
 	&__burger {
 		padding: 2em;
 		cursor: pointer;
+		animation: slide 1s 1;
 		.burger-box {
 			position: relative;
 			display: inline-block;
@@ -114,7 +115,7 @@ body {
 
 	&__arrow {
 		&--bigger {
-            margin-bottom: -3.5em;
+			animation: bounce 3s infinite;
 		}
 
 	}
