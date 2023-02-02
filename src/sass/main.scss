@@ -8,17 +8,34 @@ body {
 	font-size: 1.6rem;
 	background-color: $background-color;
 	color: $text-color;
+	overflow-x: hidden;
+}
+
+.container {
+	margin: 0 auto;
+	padding: 0 1em;
+	width: 100%;
+	max-width: 1400px;
+}
+
+.stop-scrolling {
 	overflow: hidden;
 }
 
 .navbar {
-	position: absolute;
+	position: fixed;
 	top: 0;
-	right: 0;
+	width: 100vw;
+	z-index: 10;
 
 	&__burger {
-		padding: 2em;
+		position: fixed;
+		top: 0;
+		right: 0;
+		padding: 1.5em;
 		cursor: pointer;
+		z-index: 10;
+
 		.burger-box {
 			position: relative;
 			display: inline-block;
@@ -55,21 +72,31 @@ body {
 	}
 
 	&__list {
-		position: absolute;
-		top: 0;
-		left: 150%;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
-		height: 100vh;
+		position: absolute;
+		top: 0;
+		right: 0;
 		width: 100vw;
+		height: 100vh;
 		background-color: $background-color;
 		font-size: 2.5rem;
+		transform: translateX(100%);
+		overflow: auto;
+		opacity: 0;
+		transition: transform .5s cubic-bezier(.65,.05,.36,1),opacity .5s;
+		z-index: 5;
+
+		&--active {
+			transform: translateX(0);
+			opacity: 1;
+		}
 	}
 
 	&__item {
-		padding: 2em;
+		padding: 1.5em;
 	}
 
 }
@@ -110,11 +137,12 @@ body {
 		left: 50%;
 		transform: translateX(-50%);
 		cursor: pointer;
+		z-index: 1;
 	}
 
 	&__arrow {
 		&--bigger {
-            margin-bottom: -3.5em;
+			animation: bounce 3s infinite;
 		}
 
 	}
