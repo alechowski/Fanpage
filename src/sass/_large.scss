@@ -1,4 +1,25 @@
 @media (min-width: 992px) {
+
+    .navbar {
+        &__burger {
+            display: none;
+        }
+
+        &__list {
+            flex-direction: row;
+            justify-content: space-evenly;
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100px;
+            width: 50vw;
+            text-align: center;
+            transform: translateX(0);
+            overflow: hidden;
+            opacity: 1;
+        }
+    }
+
     .header {
         &__box {
             &--large {
