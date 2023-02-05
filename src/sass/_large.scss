@@ -7,16 +7,26 @@
 
         &__list {
             flex-direction: row;
-            justify-content: space-evenly;
-            position: absolute;
-            top: 0;
-            right: 0;
+            justify-content: left;
             height: 100px;
             width: 50vw;
-            text-align: center;
+            text-align: left;
+            font-size: 2rem;
             transform: translateX(0);
             overflow: hidden;
             opacity: 1;
+        }
+
+        &__item {
+
+            &-link {
+        
+                    &:hover {
+                        color: $highlight-color;
+                    }
+                
+            }
+            
         }
     }
 
