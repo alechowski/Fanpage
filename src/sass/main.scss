@@ -44,8 +44,8 @@ body {
 			width: 40px;
 			height: 24px;
 			.burger-bar,
-            .burger-bar:after,
-			.burger-bar:before {
+            .burger-bar::after,
+			.burger-bar::before {
 				position: absolute;
 				display: block;
 				right: 0;
@@ -55,17 +55,17 @@ body {
 				background-color: $text-color;
                 border-radius: 3px;
 			}
-            .burger-bar:after,
-			.burger-bar:before {
+            .burger-bar::after,
+			.burger-bar::before {
 				content: '';
 			}
 
-            .burger-bar:after {
+            .burger-bar::after {
                 top: 20px;
                 width: 60%;
             }
 
-            .burger-bar:before{
+            .burger-bar::before{
                 top: 10px;
                 width: 80%;
             }
@@ -97,7 +97,13 @@ body {
 	}
 
 	&__item {
-		padding: 1.5em;
+		padding: 0 1em;
+		text-transform: uppercase;
+
+		&-link {
+			display: inline-block;
+			padding: 1.5em 2.5em;
+		}
 	}
 
 }

@@ -1,4 +1,35 @@
 @media (min-width: 992px) {
+
+    .navbar {
+        &__burger {
+            display: none;
+        }
+
+        &__list {
+            flex-direction: row;
+            justify-content: left;
+            height: 100px;
+            width: 50vw;
+            text-align: left;
+            font-size: 2rem;
+            transform: translateX(0);
+            overflow: hidden;
+            opacity: 1;
+        }
+
+        &__item {
+
+            &-link {
+        
+                    &:hover {
+                        color: $highlight-color;
+                    }
+                
+            }
+            
+        }
+    }
+
     .header {
         &__box {
             &--large {
