@@ -109,11 +109,16 @@ body {
 }
 
 .header {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100vh;
+	
 	&__background-block {
 		position: absolute;
 		top: 0;
 		left: 0;
-		height: 100vh;
+		height: 100%;
 		width: 50vw;
 		background-color: $highlight-color;
 		z-index: -1;
