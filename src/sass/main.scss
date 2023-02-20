@@ -44,7 +44,7 @@ body {
 			width: 40px;
 			height: 24px;
 			.burger-bar,
-            .burger-bar::after,
+			.burger-bar::after,
 			.burger-bar::before {
 				position: absolute;
 				display: block;
@@ -53,22 +53,22 @@ body {
 				height: 3px;
 				width: 40px;
 				background-color: $text-color;
-                border-radius: 3px;
+				border-radius: 3px;
 			}
-            .burger-bar::after,
+			.burger-bar::after,
 			.burger-bar::before {
 				content: '';
 			}
 
-            .burger-bar::after {
-                top: 20px;
-                width: 60%;
-            }
+			.burger-bar::after {
+				top: 20px;
+				width: 60%;
+			}
 
-            .burger-bar::before{
-                top: 10px;
-                width: 80%;
-            }
+			.burger-bar::before {
+				top: 10px;
+				width: 80%;
+			}
 		}
 	}
 
@@ -87,7 +87,7 @@ body {
 		transform: translateX(100%);
 		overflow: auto;
 		opacity: 0;
-		transition: transform .5s cubic-bezier(.65,.05,.36,1),opacity .5s;
+		transition: transform 0.5s cubic-bezier(0.65, 0.05, 0.36, 1), opacity 0.5s;
 		z-index: 5;
 
 		&--active {
@@ -105,7 +105,6 @@ body {
 			padding: 1.5em 2.5em;
 		}
 	}
-
 }
 
 .header {
@@ -113,7 +112,7 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	height: 100vh;
-	
+
 	&__background-block {
 		position: absolute;
 		top: 0;
@@ -124,20 +123,19 @@ body {
 		z-index: -1;
 	}
 
-    &__box {
-        &--large {
-            display: none;
-        }
+	&__box {
+		&--large {
+			display: none;
+		}
 
-        &--small {
-            display: block;
-        }
+		&--small {
+			display: block;
+		}
 
-        &-logo {
-            box-shadow: 0 0 20px $background-color;
-        }
-    }
-
+		&-logo {
+			box-shadow: 0 0 20px $background-color;
+		}
+	}
 
 	&__arrows-box {
 		position: absolute;
@@ -156,9 +154,51 @@ body {
 		&--bigger {
 			animation: bounce 3s infinite;
 		}
-
 	}
 }
 
+.main {
+	padding: 1em;
+
+	&__title {
+		padding: 2em 1em;
+		font-size: 3rem;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	.section {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding-bottom: 3em;
+
+		&__title {
+			padding: 1em;
+			text-align: center;
+		}
+	}
+
+	.members {
+		&__box {
+			padding: 2em 0.5em;
+		}
+
+		&__block {
+			margin-bottom: 2em;
+			padding: 2em;
+			background-color: #222;
+		}
+
+		&__photo {
+			padding-bottom: 0.5em;
+		}
+
+		&__name {
+			line-height: 3em;
+			font-size: 2rem;
+		}
+	}
+}
 
 @import './large';
