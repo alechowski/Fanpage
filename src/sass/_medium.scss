@@ -1,3 +1,42 @@
 @media (min-width: 768px) {
+
+    .main {
+    
+        &__title {
+            padding: 2em 1em;
+            font-size: 3rem;
+        }
+    
+        .section {
+            padding-bottom: 3em;
+    
+            &__title {
+                padding: 1em;
+                text-align: center;
+            }
+        }
+    
+        .members {
+            &__box {
+                flex-direction: row;
+                padding: 2em 0.5em;
+            }
+    
+            &__block {
+                margin: 0 1em 2em;
+                padding: 2em;
+                background-color: #222;
+            }
+    
+            &__photo {
+                padding-bottom: 0.5em;
+            }
+    
+            &__name {
+                line-height: 3em;
+                font-size: 2rem;
+            }
+        }
+    }
     
 }
