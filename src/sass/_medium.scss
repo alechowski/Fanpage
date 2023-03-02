@@ -19,6 +19,7 @@
         .members {
             &__box {
                 flex-direction: row;
+                height: 100vh;
                 padding: 2em 0.5em;
             }
     
@@ -26,6 +27,11 @@
                 margin: 0 1em 2em;
                 padding: 2em;
                 background-color: #222;
+            }
+
+            &__block:first-child,
+            &__block:last-child {
+                align-self: start;
             }
     
             &__photo {
