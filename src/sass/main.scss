@@ -180,6 +180,11 @@ body {
 		}
 	}
 
+	.section:nth-child(odd) {
+		background-color: $highlight-color;
+		// color: $background-color;
+	}
+
 	.members {
 		&__box {
 			display: flex;
@@ -210,9 +215,6 @@ body {
 	}
 
 	.story {
-		width: 100vw;
-		background-color: $highlight-color;
-		color: $background-color;
 
 		&__paragraph {
 			padding: 2em;
