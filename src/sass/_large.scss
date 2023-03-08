@@ -7,11 +7,10 @@
 
         &__list {
             flex-direction: row;
-            justify-content: left;
-            height: 100px;
-            width: 50vw;
-            text-align: left;
-            font-size: 2rem;
+            justify-content: center;
+            height: 80px;
+            width: 100vw;
+            text-align: left;   
             transform: translateX(0);
             overflow: hidden;
             opacity: 1;
