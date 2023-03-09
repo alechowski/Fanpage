@@ -113,6 +113,7 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	height: 100vh;
+	// position: sticky;
 
 	&__background-block {
 		position: absolute;
@@ -159,7 +160,6 @@ body {
 }
 
 .main {
-	padding: 1em;
 
 	&__title {
 		padding: 2em 1em;
@@ -185,7 +185,6 @@ body {
 
 	.section:nth-child(odd) {
 		background-color: $highlight-color;
-		// color: $background-color;
 	}
 
 	.members {
