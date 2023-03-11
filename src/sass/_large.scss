@@ -10,7 +10,7 @@
             justify-content: center;
             height: 80px;
             width: 100vw;
-            text-align: left;   
+            text-align: left;
             transform: translateX(0);
             overflow: hidden;
             opacity: 1;
@@ -37,6 +37,18 @@
     
             &--small {
                 display: none;
+            }
+        }
+    }
+
+    .main {
+        .discography {
+            &__box {
+                flex-direction: row;
+            }
+
+            &__block {
+                margin: 4em;
             }
         }
     }
