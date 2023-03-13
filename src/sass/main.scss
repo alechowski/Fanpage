@@ -160,7 +160,6 @@ body {
 }
 
 .main {
-
 	&__title {
 		padding: 2em 1em;
 		font-size: 3rem;
@@ -216,7 +215,6 @@ body {
 	}
 
 	.story {
-
 		&__paragraph {
 			padding: 2em;
 
@@ -230,12 +228,9 @@ body {
 				font-weight: 400;
 			}
 		}
-
-
 	}
 
 	.discography {
-
 		&__box {
 			display: flex;
 			justify-content: center;
@@ -259,8 +254,17 @@ body {
 			margin-top: 1em;
 		}
 	}
+
+	.videos {
+		&__box {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 80vh;
+			width: 100%;
+		}
+	}
 }
 
 @import './medium';
 @import './large';
-
