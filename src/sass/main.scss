@@ -214,8 +214,23 @@ body {
 	}
 
 	.story {
+		margin-top: 100px;
+		background-color: #000;
+
+		&__title {
+			padding: 2em;
+			font-size: 3.2rem;
+			text-align: center;
+		}
+
 		&__paragraph {
 			padding: 2em;
+			width: 100vw;
+
+			&:nth-child(2n+1) {
+				background-color: $highlight-color;
+				color: $background-color;
+			}
 
 			&-title {
 				padding-bottom: 1em;
