@@ -114,15 +114,19 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	align-items: center;
 	height: 100vh;
-	// position: sticky;
+	width: 100vw;
+	top: 0;
+	position: sticky;
+	z-index: -2;
 
 	&__background-block {
 		position: absolute;
 		top: 0;
 		left: 0;
 		height: 100%;
-		width: 50vw;
+		width: 50%;
 		background-color: $highlight-color;
 		z-index: -1;
 	}
@@ -151,7 +155,6 @@ body {
 		left: 50%;
 		transform: translateX(-50%);
 		cursor: pointer;
-		z-index: 1;
 	}
 
 	&__arrow {
@@ -162,6 +165,9 @@ body {
 }
 
 .main {
+
+	background-color: $background-color;
+
 	&__title {
 		padding: 2em 1em;
 		font-size: 3rem;
