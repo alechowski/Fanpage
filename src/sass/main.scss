@@ -165,7 +165,6 @@ body {
 }
 
 .main {
-
 	background-color: $background-color;
 
 	&__title {
@@ -238,7 +237,7 @@ body {
 			padding: 2em;
 			width: 100vw;
 
-			&:nth-child(2n+1) {
+			&:nth-child(2n + 1) {
 				background-color: $highlight-color;
 				color: $background-color;
 			}
@@ -287,6 +286,15 @@ body {
 			width: calc(100% - 2rem);
 			height: auto;
 			aspect-ratio: 16/9;
+		}
+	}
+
+	.gallery {
+		&__box {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: $card-color;
 		}
 	}
 }
