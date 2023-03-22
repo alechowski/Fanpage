@@ -207,7 +207,7 @@ body {
 		&__block {
 			margin-bottom: 2em;
 			padding: 2em;
-			background-color: #222;
+			background-color: $card-color;
 			max-width: 300px;
 			height: 705px;
 		}
@@ -225,7 +225,7 @@ body {
 
 	.career {
 		margin-top: 100px;
-		background-color: #000;
+		background-color: $background-color;
 
 		&__title {
 			padding: 2em;
@@ -268,7 +268,7 @@ body {
 			margin-top: 2em;
 			padding: 2em;
 			max-width: 364px;
-			background-color: #222;
+			background-color: $card-color;
 		}
 
 		&__album-name {
