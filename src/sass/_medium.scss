@@ -43,6 +43,12 @@
                 font-size: 2rem;
             }
         }
+
+        .gallery {
+            &__cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
     }
     
 }
