@@ -313,6 +313,10 @@ body {
 				object-fit: cover;
 				object-position: top;
 				cursor: pointer;
+				transition: transform 0.8s;
+			}
+			&-img:hover {
+				transform: scale(1.2);
 			}
 		}
 	}
