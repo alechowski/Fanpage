@@ -290,7 +290,6 @@ body {
 	}
 
 	.gallery {
-
 		&__box {
 			display: flex;
 			justify-content: center;
@@ -303,6 +302,18 @@ body {
 			grid-template-columns: repeat(1, 1fr);
 			grid-gap: 1em;
 			padding: 1em 1em;
+		}
+		
+		&__card {
+
+			overflow: hidden;
+			&-img {
+				height: 200px;
+				width: 100%;
+				object-fit: cover;
+				object-position: top;
+				cursor: pointer;
+			}
 		}
 	}
 }

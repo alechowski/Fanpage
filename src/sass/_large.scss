@@ -53,8 +53,15 @@
         }
 
         .gallery {
+            padding: 4em;
             &__cards {
                 grid-template-columns: repeat(3, 1fr);
+            }
+            &__card {
+
+                &-img {
+                    height: 250px;
+                }
             }
         }
     }
