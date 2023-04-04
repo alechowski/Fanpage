@@ -303,9 +303,8 @@ body {
 			grid-gap: 1em;
 			padding: 1em 1em;
 		}
-		
-		&__card {
 
+		&__card {
 			overflow: hidden;
 			&-img {
 				height: 200px;
@@ -319,6 +318,18 @@ body {
 				transform: scale(1.2);
 			}
 		}
+	}
+}
+
+.footer {
+	width: 100%;
+	background-color: $background-color;
+
+	&__box {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 2em;
 	}
 }
 
