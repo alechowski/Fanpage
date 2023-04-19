@@ -1,6 +1,7 @@
 const burgerBtn = document.querySelector('.navbar__burger');
 const menuList = document.querySelector('.navbar__list');
 const allMenuItems = document.querySelectorAll('.navbar__item');
+const arrowsBtn = document.querySelector('.header__arrows-box')
 
 const menuAnimation = () => {
 	menuList.classList.toggle('navbar__list--active');
@@ -14,5 +15,10 @@ const menuAnimation = () => {
 	});
 };
 
+const scrollFunction = () => {
+	
+	document.getElementById("members").scrollIntoView();
+}
 
 burgerBtn.addEventListener('click', menuAnimation);
+arrowsBtn.addEventListener('click', scrollFunction);
