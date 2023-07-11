@@ -350,6 +350,7 @@ body {
 .footer {
 	width: 100%;
 	background-color: $background-color;
+	border-top: 1px solid $text-color;
 
 	&__box {
 		display: flex;
