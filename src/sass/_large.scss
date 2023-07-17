@@ -42,6 +42,10 @@
     }
 
     .main {
+        .section {
+            scroll-margin-top: 80px;
+        }
+
         .discography {
             &__box {
                 flex-direction: row;
