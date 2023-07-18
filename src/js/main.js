@@ -2,7 +2,7 @@ const burgerBtn = document.querySelector('.navbar__burger');
 const menuList = document.querySelector('.navbar__list');
 const allMenuItems = document.querySelectorAll('.navbar__item');
 const arrowsBtn = document.querySelector('.header__arrows-box');
-const footerYear = document.querySelector(".footer__year");
+const footerYear = document.querySelector('.footer__year');
 const navLinks = document.querySelectorAll('.navbar__item-link');
 const scrollSpySections = document.querySelectorAll('.section');
 
@@ -19,37 +19,43 @@ const menuAnimation = () => {
 };
 
 const scrollFunction = () => {
-	
-	document.getElementById("members").scrollIntoView();
-}
+	document.getElementById('members').scrollIntoView();
+};
 
 const handleCurrentYear = () => {
 	const year = new Date().getFullYear();
 	footerYear.innerText = year;
 };
 
-
 const handleScrollSpy = () => {
-    if(document.body.classList.contains('main-page')) {
+	if (document.body.classList.contains('main-page')) {
+		const sections = [];
 
-        const sections = [] 
+		scrollSpySections.forEach((section) => {
+			if (window.scrollY <= section.offsetTop + section.offsetHeight - 80) {
+				sections.push(section);
 
-        scrollSpySections.forEach(section => {
+				const activeSection = document.querySelector(
+					`[href*="${sections[0].id}"]`
+				);
 
-            if(window.scrollY <= section.offsetTop + section.offsetHeight - 80) {
-                sections.push(section)
+				navLinks.forEach((item) =>
+					item.classList.remove('navbar__item-link--active')
+				);
 
-                const activeSection = document.querySelector(`[href*="${sections[0].id}"]`)
-
-                navLinks.forEach(item => item.classList.remove('navbar__item-link--active'))
-
-                activeSection.classList.add('navbar__item-link--active')
-            }
-
-            })
-    }
-}
-
+				activeSection.classList.add('navbar__item-link--active');
+			}
+			if (window.scrollY < window.innerHeight) {
+				navLinks.forEach((item) =>
+					item.classList.remove('navbar__item-link--active')
+				);
+				document
+					.querySelector('ul li a')
+					.classList.add('navbar__item-link--active');
+			}
+		});
+	}
+};
 
 handleCurrentYear();
 burgerBtn.addEventListener('click', menuAnimation);
