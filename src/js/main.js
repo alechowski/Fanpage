@@ -5,6 +5,7 @@ const arrowsBtn = document.querySelector('.header__arrows-box');
 const footerYear = document.querySelector('.footer__year');
 const navLinks = document.querySelectorAll('.navbar__item-link');
 const scrollSpySections = document.querySelectorAll('.section');
+const homeLink = document.querySelector('.navbar__item-link');
 
 const menuAnimation = () => {
 	menuList.classList.toggle('navbar__list--active');
@@ -49,9 +50,7 @@ const handleScrollSpy = () => {
 				navLinks.forEach((item) =>
 					item.classList.remove('navbar__item-link--active')
 				);
-				document
-					.querySelector('ul li a')
-					.classList.add('navbar__item-link--active');
+				homeLink.classList.add('navbar__item-link--active');
 			}
 		});
 	}
