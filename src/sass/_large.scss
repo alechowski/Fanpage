@@ -106,7 +106,7 @@
 
             &__box {
                 display: flex;
-                height: 100%;
+                flex-wrap: nowrap;
                 padding: 2em 0.5em;
             }
     
@@ -114,6 +114,7 @@
                 justify-self: center;
                 margin: 0 1em 2em;
                 padding: 2em;
+                width: 100%;
 
                 &:first-child,
                 &:last-child{
