@@ -8,7 +8,7 @@ BlackPink Fanpage - this site was born out of my wife's passion for K-pop music 
 
 
 ## General Information
-My wife challenged me to create this website for her. She was my 'client,' and we discussed every aspect of this project. The layout of this page is inspired by the official BlackPink site. This is a landing page with potential for development in the future.
+My wife challenged me to create this website for her. She was my 'client,' and we discussed every aspect of this project. The layout of this page is inspired by the official BlackPink site. 
 
 ## Status
 Under construction
