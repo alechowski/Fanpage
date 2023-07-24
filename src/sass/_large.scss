@@ -71,6 +71,14 @@
             }
         }
 
+        .career {
+            &__timeline {
+                border: none;
+                &-element:nth-child(odd) {
+                    transform: translateX(50%);
+                }
+        }
+    }
 
         .discography {
             &__box {
