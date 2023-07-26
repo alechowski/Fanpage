@@ -74,9 +74,14 @@
         .career {
             &__timeline {
                 border: none;
-                &-element:nth-child(odd) {
-                    transform: translateX(50%);
+                &-element {
+                    list-style: none;
                 }
+
+                &-element:hover,
+			    &-element:focus {
+				    list-style: none; 
+			}
         }
     }
 
