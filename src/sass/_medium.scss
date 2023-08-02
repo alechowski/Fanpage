@@ -39,6 +39,12 @@
         }
 
         .gallery {
+            &__show {
+    
+                &-info {
+                    font-size: 1.2rem;
+                }
+            }
             &__cards {
                 grid-template-columns: repeat(2, 1fr);
             }
