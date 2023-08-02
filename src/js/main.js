@@ -6,6 +6,7 @@ const footerYear = document.querySelector('.footer__year');
 const navLinks = document.querySelectorAll('.navbar__item-link');
 const scrollSpySections = document.querySelectorAll('.section');
 const homeLink = document.querySelector('.navbar__item-link');
+const galleryImgs = document.querySelectorAll('.gallery__card-img');
 
 const menuAnimation = () => {
 	menuList.classList.toggle('navbar__list--active');
@@ -56,7 +57,12 @@ const handleScrollSpy = () => {
 	}
 };
 
+const listen = (e) => {
+	console.log(e.target.attributes);	
+}
+
 handleCurrentYear();
 burgerBtn.addEventListener('click', menuAnimation);
 arrowsBtn.addEventListener('click', scrollFunction);
 window.addEventListener('scroll', handleScrollSpy);
+galleryImgs.forEach( img => img.addEventListener('click', listen));
