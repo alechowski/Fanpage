@@ -57,12 +57,37 @@ const handleScrollSpy = () => {
 	}
 };
 
-const listen = (e) => {
-	console.log(e.target.attributes);	
-}
+const showGalleryImg = (e) => {
+	
+	const source = e.target.dataset.source;
+	const author = e.target.dataset.author;
+	const license = e.target.dataset.license;
+	const alt = e.target.alt;
+	const src = e.target.src;
+
+	const showGallery = document.querySelector('.gallery__show');
+	const showImg = document.querySelector('.gallery__show-img');
+	const imgData = document.querySelector('.gallery__show-data');
+
+	showGallery.style.display = 'block';
+	showImg.src = src;
+	showImg.alt = alt;
+
+	imgData.innerText = `${source} / ${author} / ${license}`;
+
+	window.addEventListener('click', closeShow);
+};
+
+const closeShow = (e) => {
+	if (e.target === document.querySelector('.gallery__show-box')) {
+		e.target.parentElement.style.display = 'none';
+	} else {
+		return;
+	}
+};
 
 handleCurrentYear();
 burgerBtn.addEventListener('click', menuAnimation);
 arrowsBtn.addEventListener('click', scrollFunction);
 window.addEventListener('scroll', handleScrollSpy);
-galleryImgs.forEach( img => img.addEventListener('click', listen));
+galleryImgs.forEach((img) => img.addEventListener('click', showGalleryImg));
