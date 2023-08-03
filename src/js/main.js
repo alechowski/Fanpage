@@ -58,7 +58,7 @@ const handleScrollSpy = () => {
 };
 
 const showGalleryImg = (e) => {
-
+	
 	const source = e.target.dataset.source;
 	const author = e.target.dataset.author;
 	const license = e.target.dataset.license;
@@ -70,11 +70,20 @@ const showGalleryImg = (e) => {
 	const imgData = document.querySelector('.gallery__show-data');
 
 	showGallery.style.display = 'block';
-	showImg.src = src
-	showImg.alt = alt
+	showImg.src = src;
+	showImg.alt = alt;
 
-	imgData.innerText = `${source} / ${author} / ${license}`
+	imgData.innerText = `${source} / ${author} / ${license}`;
 
+	window.addEventListener('click', closeShow);
+};
+
+const closeShow = (e) => {
+	if (e.target === document.querySelector('.gallery__show-box')) {
+		e.target.parentElement.style.display = 'none';
+	} else {
+		return;
+	}
 };
 
 handleCurrentYear();
