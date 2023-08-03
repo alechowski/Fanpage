@@ -57,8 +57,8 @@ const handleScrollSpy = () => {
 	}
 };
 
-const listen = (e) => {
-	
+const showGalleryImg = (e) => {
+
 	const source = e.target.dataset.source;
 	const author = e.target.dataset.author;
 	const license = e.target.dataset.license;
@@ -73,7 +73,7 @@ const listen = (e) => {
 	showImg.src = src
 	showImg.alt = alt
 
-	imgData.innerText = `${source}/ ${author}/ ${license}`
+	imgData.innerText = `${source} / ${author} / ${license}`
 
 };
 
@@ -81,4 +81,4 @@ handleCurrentYear();
 burgerBtn.addEventListener('click', menuAnimation);
 arrowsBtn.addEventListener('click', scrollFunction);
 window.addEventListener('scroll', handleScrollSpy);
-galleryImgs.forEach((img) => img.addEventListener('click', listen));
+galleryImgs.forEach((img) => img.addEventListener('click', showGalleryImg));
