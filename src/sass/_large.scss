@@ -71,6 +71,19 @@
             }
         }
 
+        .career {
+            &__timeline {
+                border: none;
+                &-element {
+                    list-style: none;
+                }
+
+                &-element:hover,
+			    &-element:focus {
+				    list-style: none; 
+			}
+        }
+    }
 
         .discography {
             &__box {
