@@ -97,6 +97,12 @@
 
         .gallery {
             padding: 4em;
+            &__show {
+    
+                &-info {
+                    font-size: 1.6rem;
+                }
+            }
             &__cards {
                 grid-template-columns: repeat(3, 1fr);
             }
