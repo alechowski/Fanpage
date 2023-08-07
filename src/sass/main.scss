@@ -238,33 +238,6 @@ body {
 			letter-spacing: 2px;
 		}
 
-		&__timeline {
-			margin: -2em 2em 3em;
-			padding: 2em;
-			text-align: center;
-			border: 1px solid $text-color;
-			border-radius: 0.5em;
-
-			&-element {
-				padding-bottom: 1em;
-				list-style: circle;
-				transition: list-style 0.3s;
-			}
-
-			&-element:hover,
-			&-element:focus {
-				list-style: disc; 
-			}
-
-			&-ref {
-				transition: color 0.3s; 
-			}
-			&-ref:hover,
-			&-ref:focus  {
-				color: $highlight-color;
-			}
-		}
-
 		&__paragraph {
 			padding: 4em 2em;
 			width: 100vw;
