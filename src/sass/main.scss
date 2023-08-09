@@ -25,6 +25,24 @@ body {
 	overflow: hidden;
 }
 
+.contribution {
+	&__box {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 1em;
+		background-color: $card-info-color;
+	}
+	&__text {
+		&-link {
+			transition: color 0.3s;
+		}
+		&-link:hover {
+			color: $highlight-color;
+		}
+	}
+}
+
 .navbar {
 	position: fixed;
 	top: 0;
