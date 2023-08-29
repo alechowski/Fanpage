@@ -58,7 +58,6 @@ const handleScrollSpy = () => {
 };
 
 const showGalleryImg = (e) => {
-	
 	const source = e.target.dataset.source;
 	const author = e.target.dataset.author;
 	const license = e.target.dataset.license;
@@ -81,6 +80,11 @@ const showGalleryImg = (e) => {
 const closeShow = (e) => {
 	if (e.target === document.querySelector('.gallery__show-box')) {
 		e.target.parentElement.style.display = 'none';
+	} else if (
+		e.target.parentElement === document.querySelector('.gallery__show-close')
+	) {
+		const closeBtn = e.target.parentElement
+		closeBtn.parentElement.style.display = 'none';
 	} else {
 		return;
 	}
