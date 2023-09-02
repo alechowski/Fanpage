@@ -7,6 +7,7 @@ const navLinks = document.querySelectorAll('.navbar__item-link');
 const scrollSpySections = document.querySelectorAll('.section');
 const homeLink = document.querySelector('.navbar__item-link');
 const galleryImgs = document.querySelectorAll('.gallery__card-img');
+const closeBtn = document.querySelector('.gallery__show-close');
 
 const menuAnimation = () => {
 	menuList.classList.toggle('navbar__list--active');
@@ -80,12 +81,14 @@ const showGalleryImg = (e) => {
 const closeShow = (e) => {
 	if (e.target === document.querySelector('.gallery__show-box')) {
 		e.target.parentElement.style.display = 'none';
-	} else if (
+	}
+	 else if (
 		e.target.parentElement === document.querySelector('.gallery__show-close')
 	) {
 		const closeBtn = e.target.parentElement
 		closeBtn.parentElement.style.display = 'none';
-	} else {
+	} 
+	else {
 		return;
 	}
 };
