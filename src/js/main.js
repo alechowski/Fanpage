@@ -87,8 +87,14 @@ const closeShow = (e) => {
 	}
 };
 
+const closeGallery = () => {
+	const showGallery = document.querySelector('.gallery__show');
+	showGallery.style.display = 'none';
+}
+
 handleCurrentYear();
 burgerBtn.addEventListener('click', menuAnimation);
 arrowsBtn.addEventListener('click', scrollFunction);
 window.addEventListener('scroll', handleScrollSpy);
 galleryImgs.forEach((img) => img.addEventListener('click', showGalleryImg));
+closeBtn.addEventListener('click', closeGallery);
