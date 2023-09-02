@@ -76,6 +76,7 @@ const showGalleryImg = (e) => {
 	imgData.innerText = `${source} / ${author} / ${license}`;
 
 	window.addEventListener('click', closeShow);
+	window.addEventListener('keydown', closeByEsc);
 };
 
 const closeShow = (e) => {
@@ -90,6 +91,12 @@ const closeShow = (e) => {
 const closeGallery = () => {
 	const showGallery = document.querySelector('.gallery__show');
 	showGallery.style.display = 'none';
+}
+
+const closeByEsc = (e) => {
+	if(e.key === 'Escape') {
+		closeGallery();
+	};
 }
 
 handleCurrentYear();
