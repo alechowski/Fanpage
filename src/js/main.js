@@ -99,6 +99,14 @@ const closeByEsc = (e) => {
 	};
 }
 
+const changeGalleryImg = () => {
+	const leftBtn = document.querySelector('.gallery__show-left');
+	const rightBtn = document.querySelector('.gallery__show-right');
+
+	let gallery = [...galleryImgs]
+
+}
+
 handleCurrentYear();
 burgerBtn.addEventListener('click', menuAnimation);
 arrowsBtn.addEventListener('click', scrollFunction);
