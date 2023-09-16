@@ -307,8 +307,13 @@ body {
 			text-align: center;
 		}
 
+		&__photo:hover {
+			transform: scale(0.9);
+		}
+
 		&__photo {
 			margin-top: 1em;
+			transition: transform 0.3s;
 
 			&-text {
 				padding: 1em;
