@@ -7,6 +7,7 @@ const navLinks = document.querySelectorAll('.navbar__item-link');
 const scrollSpySections = document.querySelectorAll('.section');
 const homeLink = document.querySelector('.navbar__item-link');
 const galleryImgs = document.querySelectorAll('.gallery__card-img');
+const closeBtn = document.querySelector('.gallery__show-close');
 
 const menuAnimation = () => {
 	menuList.classList.toggle('navbar__list--active');
@@ -58,7 +59,6 @@ const handleScrollSpy = () => {
 };
 
 const showGalleryImg = (e) => {
-	
 	const source = e.target.dataset.source;
 	const author = e.target.dataset.author;
 	const license = e.target.dataset.license;
@@ -76,18 +76,32 @@ const showGalleryImg = (e) => {
 	imgData.innerText = `${source} / ${author} / ${license}`;
 
 	window.addEventListener('click', closeShow);
+	window.addEventListener('keydown', closeByEsc);
 };
 
 const closeShow = (e) => {
 	if (e.target === document.querySelector('.gallery__show-box')) {
 		e.target.parentElement.style.display = 'none';
-	} else {
+	}
+	else {
 		return;
 	}
 };
+
+const closeGallery = () => {
+	const showGallery = document.querySelector('.gallery__show');
+	showGallery.style.display = 'none';
+}
+
+const closeByEsc = (e) => {
+	if(e.key === 'Escape') {
+		closeGallery();
+	};
+}
 
 handleCurrentYear();
 burgerBtn.addEventListener('click', menuAnimation);
 arrowsBtn.addEventListener('click', scrollFunction);
 window.addEventListener('scroll', handleScrollSpy);
 galleryImgs.forEach((img) => img.addEventListener('click', showGalleryImg));
+closeBtn.addEventListener('click', closeGallery);
