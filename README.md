@@ -1,5 +1,6 @@
 # Fanpage
 BlackPink Fanpage - this site was born out of my wife's passion for K-pop music and this girl group.
+ >You can check out the project live [_here_](https://alechowski.github.io/Fanpage/)
 
 ## Table of Contents
 * [General Info](#general-information)
