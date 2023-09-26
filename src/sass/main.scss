@@ -319,6 +319,16 @@ body {
 				padding: 1em;
 				text-align: center;
 				font-size: 1.2rem;
+				
+				&--link {
+					transition: 0.3s color;
+
+					&:hover {
+						color: $highlight-color;
+					}
+				}
+
+
 			}
 		}
 	}
