@@ -59,6 +59,7 @@ const handleScrollSpy = () => {
 };
 
 const showGalleryImg = (e) => {
+	const num = e.target.dataset.number;
 	const source = e.target.dataset.source;
 	const author = e.target.dataset.author;
 	const license = e.target.dataset.license;
@@ -75,6 +76,18 @@ const showGalleryImg = (e) => {
 
 	imgData.innerText = `${source} / ${author} / ${license}`;
 
+	if(e.target.innerText === '&lt;') {
+		// const leftBtn = document.querySelector('.gallery__show-left');
+		console.log('left');
+
+	}
+	else if(e.target.innerText === '&gt;'){
+		// const rightBtn = document.querySelector('.gallery__show-right');
+		console.log('right');
+
+	}
+
+	changeGalleryImg(num)
 	window.addEventListener('click', closeShow);
 	window.addEventListener('keydown', closeByEsc);
 };
@@ -97,6 +110,41 @@ const closeByEsc = (e) => {
 	if(e.key === 'Escape') {
 		closeGallery();
 	};
+}
+
+const changeGalleryImg = (num) => {
+	const leftBtn = document.querySelector('.gallery__show-left');
+	const rightBtn = document.querySelector('.gallery__show-right');
+
+	// for(let i = 0; i < galleryImgs.length; i++) {
+	// 	console.log(galleryImgs[i]);
+	// }
+
+	console.log(galleryImgs[num-1]);
+
+}
+
+const showForward = (num) => {
+	const img = galleryImgs[num++]
+	const num = img.dataset.number;
+	const source = img.dataset.source;
+	const author = img.dataset.author;
+	const license = img.dataset.license;
+	const alt = img.alt;
+	const src = img.src;
+
+	const showGallery = document.querySelector('.gallery__show');
+	const showImg = document.querySelector('.gallery__show-img');
+	const imgData = document.querySelector('.gallery__show-data');
+
+	showGallery.style.display = 'block';
+	showImg.src = src;
+	showImg.alt = alt;
+
+	imgData.innerText = `${source} / ${author} / ${license}`;
+}
+const showBackward = () => {
+	
 }
 
 handleCurrentYear();
