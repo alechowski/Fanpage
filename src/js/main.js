@@ -67,13 +67,14 @@ const showGalleryImg = (e) => {
 
 	const showGallery = document.querySelector('.gallery__show');
 	const showImg = document.querySelector('.gallery__show-img');
-	const imgData = document.querySelector('.gallery__show-data');
+	const imgData = document.querySelector('.gallery__show-text');
 
 	showGallery.style.display = 'block';
 	showImg.src = src;
 	showImg.alt = alt;
 
-	imgData.innerText = `${source} / ${author} / ${license}`;
+	imgData.innerText = `Photo: ${source} / ${author} / ${license}`;
+	console.log(imgData.innerText);
 
 	window.addEventListener('click', closeShow);
 	window.addEventListener('keydown', closeByEsc);
