@@ -74,7 +74,6 @@ const showGalleryImg = (e) => {
 	showImg.alt = alt;
 
 	imgData.innerText = `Photo: ${source} / ${author} / ${license}`;
-	console.log(imgData.innerText);
 
 	window.addEventListener('click', closeShow);
 	window.addEventListener('keydown', closeByEsc);
