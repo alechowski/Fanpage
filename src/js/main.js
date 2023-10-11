@@ -77,12 +77,12 @@ const showGalleryImg = (e) => {
 	imgData.innerText = `${source} / ${author} / ${license}`;
 
 	if(e.target.innerText === '&lt;') {
-		// const leftBtn = document.querySelector('.gallery__show-left');
+		const leftBtn = document.querySelector('.gallery__show-left');
 		console.log('left');
 
 	}
 	else if(e.target.innerText === '&gt;'){
-		// const rightBtn = document.querySelector('.gallery__show-right');
+		const rightBtn = document.querySelector('.gallery__show-right');
 		console.log('right');
 
 	}
@@ -116,9 +116,9 @@ const changeGalleryImg = (num) => {
 	const leftBtn = document.querySelector('.gallery__show-left');
 	const rightBtn = document.querySelector('.gallery__show-right');
 
-	// for(let i = 0; i < galleryImgs.length; i++) {
-	// 	console.log(galleryImgs[i]);
-	// }
+	for(let i = 0; i < galleryImgs.length; i++) {
+		console.log(galleryImgs[i]);
+	}
 
 	console.log(galleryImgs[num-1]);
 
