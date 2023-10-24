@@ -8,6 +8,8 @@ const scrollSpySections = document.querySelectorAll('.section');
 const homeLink = document.querySelector('.navbar__item-link');
 const galleryImgs = document.querySelectorAll('.gallery__card-img');
 const closeBtn = document.querySelector('.gallery__show-close');
+const leftBtn = document.querySelector('.gallery__show-left');
+const rightBtn = document.querySelector('.gallery__show-right');
 
 const menuAnimation = () => {
 	menuList.classList.toggle('navbar__list--active');
@@ -102,9 +104,6 @@ const closeByEsc = (e) => {
 }
 
 const changeGalleryImg = (num) => {
-	const leftBtn = document.querySelector('.gallery__show-left');
-	const rightBtn = document.querySelector('.gallery__show-right');
-
 	for(let i = 0; i < galleryImgs.length; i++) {
 		console.log(galleryImgs[i]);
 	}
@@ -113,6 +112,13 @@ const changeGalleryImg = (num) => {
 
 	console.log(galleryImgs[num-1]);
 
+}
+
+const leftSwitch = () => {
+	num--
+}
+const rightSwitch = () => {
+	num++
 }
 
 const showForward = (num) => {
