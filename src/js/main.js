@@ -11,6 +11,8 @@ const closeBtn = document.querySelector('.gallery__show-close');
 const leftBtn = document.querySelector('.gallery__show-left');
 const rightBtn = document.querySelector('.gallery__show-right');
 
+let num;
+
 const menuAnimation = () => {
 	menuList.classList.toggle('navbar__list--active');
 	document.body.classList.toggle('stop-scrolling');
@@ -61,7 +63,7 @@ const handleScrollSpy = () => {
 };
 
 const showGalleryImg = (e) => {
-	const num = e.target.dataset.number;
+	num = e.target.dataset.number;
 	const source = e.target.dataset.source;
 	const author = e.target.dataset.author;
 	const license = e.target.dataset.license;
@@ -150,3 +152,5 @@ arrowsBtn.addEventListener('click', scrollFunction);
 window.addEventListener('scroll', handleScrollSpy);
 galleryImgs.forEach((img) => img.addEventListener('click', showGalleryImg));
 closeBtn.addEventListener('click', closeGallery);
+leftBtn.addEventListener('click', leftSwitch);
+rightBtn.addEventListener('click', rightSwitch);
