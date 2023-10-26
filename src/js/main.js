@@ -80,7 +80,7 @@ const showGalleryImg = (e) => {
 
 	imgData.innerText = `${source} / ${author} / ${license}`;
 
-	changeGalleryImg(num)
+	// changeGalleryImg(num)
 	window.addEventListener('click', closeShow);
 	window.addEventListener('keydown', closeByEsc);
 };
@@ -117,10 +117,14 @@ const changeGalleryImg = (num) => {
 }
 
 const leftSwitch = () => {
+	console.log(num);
 	num--
+	console.log(num);
 }
 const rightSwitch = () => {
+	console.log(num);
 	num++
+	console.log(num);
 }
 
 const showForward = (num) => {
