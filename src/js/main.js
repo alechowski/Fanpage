@@ -109,23 +109,18 @@ const closeByEsc = (e) => {
 }
 
 const leftSwitch = () => {
-	if(num < 0) {
-		num = 8
-		changeGalleryImg()
-		return	 
+	num--
+	if(num < 1) {
+		num = 9	
 	} 
-		num--
-		changeGalleryImg()
-	
+	changeGalleryImg()	
 }
 const rightSwitch = () => {
-	if(num > 8) {
-		num = 0
-		changeGalleryImg()
-	} else {
-		num++
-		changeGalleryImg()
-	}
+	num++
+	if(num > 9) {
+		num = 1	
+	} 
+	changeGalleryImg()
 }
 
 const changeGalleryImg = () => {
