@@ -12,6 +12,7 @@ const leftBtn = document.querySelector('.gallery__show-left');
 const rightBtn = document.querySelector('.gallery__show-right');
 
 let num;
+let gallery;
 
 const menuAnimation = () => {
 	menuList.classList.toggle('navbar__list--active');
@@ -81,6 +82,8 @@ const showGalleryImg = (e) => {
 	imgData.innerText = `${source} / ${author} / ${license}`;
 
 	// changeGalleryImg(num)
+	leftBtn.addEventListener('click', leftSwitch);
+	rightBtn.addEventListener('click', rightSwitch);
 	window.addEventListener('click', closeShow);
 	window.addEventListener('keydown', closeByEsc);
 };
@@ -105,16 +108,16 @@ const closeByEsc = (e) => {
 	};
 }
 
-const changeGalleryImg = (num) => {
-	for(let i = 0; i < galleryImgs.length; i++) {
-		console.log(galleryImgs[i]);
-	}
-	const galleryArray = document.querySelectorAll('.gallery__card')
-	console.log(galleryArray)
+// const changeGalleryImg = (num) => {
+// 	for(let i = 0; i < galleryImgs.length; i++) {
+// 		console.log(galleryImgs[i]);
+// 	}
+// 	const galleryArray = document.querySelectorAll('.gallery__card')
+// 	console.log(galleryArray)
 
-	console.log(galleryImgs[num-1]);
+// 	console.log(galleryImgs[num-1]);
 
-}
+// }
 
 const leftSwitch = () => {
 	console.log(num);
@@ -127,9 +130,10 @@ const rightSwitch = () => {
 	console.log(num);
 }
 
-const showForward = (num) => {
-	const img = galleryImgs[num++]
-	const num = img.dataset.number;
+const changeGalleryImg = () => {
+	[...gallery] = galleryImgs;
+	const img = gallery[num]
+	const number = img.dataset.number;
 	const source = img.dataset.source;
 	const author = img.dataset.author;
 	const license = img.dataset.license;
@@ -156,5 +160,3 @@ arrowsBtn.addEventListener('click', scrollFunction);
 window.addEventListener('scroll', handleScrollSpy);
 galleryImgs.forEach((img) => img.addEventListener('click', showGalleryImg));
 closeBtn.addEventListener('click', closeGallery);
-leftBtn.addEventListener('click', leftSwitch);
-rightBtn.addEventListener('click', rightSwitch);
