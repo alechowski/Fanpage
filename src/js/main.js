@@ -65,6 +65,7 @@ const handleScrollSpy = () => {
 
 const showGalleryImg = (e) => {
 	num = e.target.dataset.number;
+	[...gallery] = galleryImgs;
 	// const source = e.target.dataset.source;
 	// const author = e.target.dataset.author;
 	// const license = e.target.dataset.license;
@@ -125,7 +126,6 @@ const rightSwitch = () => {
 }
 
 const changeGalleryImg = () => {
-	[...gallery] = galleryImgs;
 	const img = gallery[num-1]
 	const source = img.dataset.source;
 	const author = img.dataset.author;
