@@ -67,10 +67,12 @@ const showGalleryImg = (e) => {
 	num = e.target.dataset.number;
 	[...gallery] = galleryImgs;
 
+
 	changeGalleryImg()
 
 	leftBtn.addEventListener('click', leftSwitch);
 	rightBtn.addEventListener('click', rightSwitch);
+
 	window.addEventListener('click', closeShow);
 	window.addEventListener('keydown', closeByEsc);
 };
