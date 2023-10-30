@@ -8,6 +8,11 @@ const scrollSpySections = document.querySelectorAll('.section');
 const homeLink = document.querySelector('.navbar__item-link');
 const galleryImgs = document.querySelectorAll('.gallery__card-img');
 const closeBtn = document.querySelector('.gallery__show-close');
+const leftBtn = document.querySelector('.gallery__show-left');
+const rightBtn = document.querySelector('.gallery__show-right');
+
+let num;
+let gallery;
 
 const menuAnimation = () => {
 	menuList.classList.toggle('navbar__list--active');
@@ -59,35 +64,15 @@ const handleScrollSpy = () => {
 };
 
 const showGalleryImg = (e) => {
-	const num = e.target.dataset.number;
-	const source = e.target.dataset.source;
-	const author = e.target.dataset.author;
-	const license = e.target.dataset.license;
-	const alt = e.target.alt;
-	const src = e.target.src;
+	num = e.target.dataset.number;
+	[...gallery] = galleryImgs;
 
-	const showGallery = document.querySelector('.gallery__show');
-	const showImg = document.querySelector('.gallery__show-img');
-	const imgData = document.querySelector('.gallery__show-text');
 
-	showGallery.style.display = 'block';
-	showImg.src = src;
-	showImg.alt = alt;
+	changeGalleryImg()
 
-	imgData.innerText = `Photo: ${source} / ${author} / ${license}`;
+	leftBtn.addEventListener('click', leftSwitch);
+	rightBtn.addEventListener('click', rightSwitch);
 
-	if(e.target.innerText === '&lt;') {
-		// const leftBtn = document.querySelector('.gallery__show-left');
-		console.log('left');
-
-	}
-	else if(e.target.innerText === '&gt;'){
-		// const rightBtn = document.querySelector('.gallery__show-right');
-		console.log('right');
-
-	}
-
-	changeGalleryImg(num)
 	window.addEventListener('click', closeShow);
 	window.addEventListener('keydown', closeByEsc);
 };
@@ -112,21 +97,23 @@ const closeByEsc = (e) => {
 	};
 }
 
-const changeGalleryImg = (num) => {
-	const leftBtn = document.querySelector('.gallery__show-left');
-	const rightBtn = document.querySelector('.gallery__show-right');
-
-	// for(let i = 0; i < galleryImgs.length; i++) {
-	// 	console.log(galleryImgs[i]);
-	// }
-
-	console.log(galleryImgs[num-1]);
-
+const leftSwitch = () => {
+	num--
+	if(num < 1) {
+		num = 9	
+	} 
+	changeGalleryImg()	
+}
+const rightSwitch = () => {
+	num++
+	if(num > 9) {
+		num = 1	
+	} 
+	changeGalleryImg()
 }
 
-const showForward = (num) => {
-	const img = galleryImgs[num++]
-	const num = img.dataset.number;
+const changeGalleryImg = () => {
+	const img = gallery[num-1]
 	const source = img.dataset.source;
 	const author = img.dataset.author;
 	const license = img.dataset.license;
@@ -142,9 +129,6 @@ const showForward = (num) => {
 	showImg.alt = alt;
 
 	imgData.innerText = `${source} / ${author} / ${license}`;
-}
-const showBackward = () => {
-	
 }
 
 handleCurrentYear();
