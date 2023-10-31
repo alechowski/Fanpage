@@ -377,20 +377,30 @@ body {
 			&-innerbox {
 				display: flex;
 				flex-direction: row;
-				justify-content: space-between;
+				justify-content: center;
 				align-items: center;
 			}
 
 			&-left, &-right {
 				padding: 0 0.3em;
+				position: absolute;
 				color: $text-color;
 				font-size: 4rem;
+				background-color: $card-color;
 				cursor: pointer;
 				z-index: 102;
 
 				&:hover {
 					color: $highlight-color;
 				}
+			}
+
+			&-left {
+				left: 5%;
+			}
+
+			&-right {
+				right: 5%;
 			}
 
 			&-img {
