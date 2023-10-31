@@ -122,7 +122,7 @@ const changeGalleryImg = () => {
 
 	const showGallery = document.querySelector('.gallery__show');
 	const showImg = document.querySelector('.gallery__show-img');
-	const imgData = document.querySelector('.gallery__show-data');
+	const imgData = document.querySelector('.gallery__show-text');
 
 	showGallery.style.display = 'block';
 	showImg.src = src;
