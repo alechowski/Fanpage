@@ -99,6 +99,14 @@
             padding: 4em;
             &__show {
     
+                &-left {
+                    left: 5%;
+                }
+    
+                &-right {
+                    right: 5%;
+                }
+
                 &-info {
                     font-size: 1.6rem;
                 }
