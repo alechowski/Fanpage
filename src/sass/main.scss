@@ -383,25 +383,22 @@ body {
 			}
 
 			&-left, &-right {
-				padding: 0 0.3em;
+				padding: 0 0.2em;
 				position: absolute;
 				color: $text-color;
-				font-size: 4rem;
+				font-size: 2.5rem;
 				background-color: $card-color;
 				cursor: pointer;
 				z-index: 102;
 
-				&:hover {
-					color: $highlight-color;
-				}
 			}
 
 			&-left {
-				left: 5%;
+				left: 0;
 			}
 
 			&-right {
-				right: 5%;
+				right: 0;
 			}
 
 			&-img {

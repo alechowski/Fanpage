@@ -41,6 +41,12 @@
         .gallery {
             &__show {
     
+                &-left, &-right {
+                    padding: 0 0.3em;
+                    font-size: 3rem;
+                    cursor: pointer;
+                }
+                
                 &-info {
                     font-size: 1.2rem;
                 }

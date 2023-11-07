@@ -98,7 +98,25 @@
         .gallery {
             padding: 4em;
             &__show {
+
+                &-left, &-right {
+                    padding: 0 0.3em;
+                    font-size: 4rem;
+                    cursor: pointer;
     
+                    &:hover {
+                        color: $highlight-color;
+                    }
+                }
+    
+                &-left {
+                    left: 5%;
+                }
+    
+                &-right {
+                    right: 5%;
+                }
+
                 &-info {
                     font-size: 1.6rem;
                 }
