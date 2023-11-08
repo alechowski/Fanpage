@@ -99,6 +99,10 @@
             padding: 4em;
             &__show {
 
+                &-innerbox {
+                    max-width: 80%;
+                }
+
                 &-left, &-right {
                     padding: 0 0.3em;
                     font-size: 4rem;
@@ -163,8 +167,12 @@
         .gallery {
             &__show {
 
-                &-innerbox {
-                    max-width: 80%;
+                &-left {
+                    left: 10%;
+                }
+    
+                &-right {
+                    right: 10%;
                 }
             }
         }
