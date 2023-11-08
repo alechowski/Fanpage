@@ -159,5 +159,14 @@
                 }
             }
         }
+
+        .gallery {
+            &__show {
+
+                &-innerbox {
+                    max-width: 80%;
+                }
+            }
+        }
     }
 }
